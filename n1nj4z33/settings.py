@@ -4,7 +4,7 @@ App settings
 """
 import os
 
-# REPO_NAME = ""
+REPO_NAME = ""
 DEBUG = True
 SECRET_KEY = "n1nj4z33"
 
@@ -16,6 +16,7 @@ def parent_dir(path):
 
 PROJECT_ROOT = parent_dir(APP_DIR)
 
+FREEZER_BASE_URL = "http://localhost/{0}".format(REPO_NAME)
 FREEZER_DESTINATION = os.path.join(PROJECT_ROOT, "build")
 FREEZER_REMOVE_EXTRA_FILES = False
 
